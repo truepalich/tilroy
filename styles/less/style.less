@@ -1,0 +1,772 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Color values
+// --------------------------------------------------
+@backColor:                     #fff;
+@menuColor:                     #808080;
+@linkColor:                     #797979;
+@copyRightColor:                #b2b2b2;
+@stripColor:                    #353535;
+
+@buttonBackColor:               #80c241;
+@buttonBorderColor:             #6fa939;
+@buttonColor:                   #fff;
+@buttonShadowColor:             #a0a0a0;
+@buttonBackHoverColor:          #7aba3d;
+@buttonShadowActiveColor:       #6fa939;
+@buttonTextShadow:              #609131;
+
+// Global values
+// --------------------------------------------------
+@wrapWidth:          1200px;
+@ButtonRadius:       4px;
+@mainPhotoHeight:    725px;
+
+
+// Global
+// --------------------------------------------------
+body 
+{
+    background: @backColor; 
+    font-family:  arial, Tahoma, Calibri, Verdana, Myriad Pro; 
+    color: #797979; 
+    font-size: 14px; 
+    min-width: 1020px;
+}
+
+a 
+{
+    text-decoration: none; 
+    color: #e36325;
+}
+
+a:hover 
+{
+    text-decoration: underline;
+}
+
+p 
+{
+    margin: 14px 0px; 
+    line-height: 22px; 
+    font-size: 14px;
+}
+
+.cp 
+{
+    cursor: pointer;
+}
+
+
+// Button
+// --------------------------------------------------
+.buttonDef
+{
+    cursor: pointer;  
+    text-decoration: none; 
+    border: 0px; 
+    margin: 0px; 
+    text-align: left; 
+    display: inline-block;
+    line-height: 12px; 
+    padding: 18px 18px; 
+    font-size: 14px; 
+    -webkit-border-radius: @ButtonRadius;
+    -moz-border-radius: @ButtonRadius;
+    border-radius: @ButtonRadius;
+    border: 1px solid @buttonBorderColor;
+    color: @buttonColor;
+    background-color: @buttonBackColor;
+    -webkit-box-shadow: 0px 0px 6px 0px @buttonShadowColor; 
+    box-shadow: 0px 0px 6px 0px @buttonShadowColor;
+    text-shadow: 0px 1px 1px @buttonTextShadow;  
+}
+
+.buttonDef:hover
+{
+    text-decoration: none;
+    background-color: @buttonBackHoverColor;
+    color: @buttonColor;
+}
+
+.buttonDef:active
+{
+    background-color: @buttonBackHoverColor;
+    -webkit-box-shadow: 0px 0px 15px 0px @buttonShadowActiveColor inset; 
+    box-shadow: 0px 0px 15px 0px @buttonShadowActiveColor inset;
+    color: @buttonColor;
+    text-decoration: none;
+}
+
+.buttonIcon
+{
+    background: @buttonBackColor url('../../styles/images/button_icon.png') no-repeat 10px 16px;
+    padding-left: 35px;
+}
+
+
+// Structure
+// --------------------------------------------------
+#wrapper 
+{
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.wrap 
+{
+    margin: 0 auto;
+    max-width: @wrapWidth;
+    width: 100%;
+}
+
+
+// Header
+// --------------------------------------------------
+.hrow-1 
+{
+    background: url('../../styles/images/h_row_1_back.png') repeat-x;
+    height: 25px;
+    
+    .slash 
+    {
+        display: inline-block;
+        float: right;
+        margin-right: 15px;
+        color: #555658;
+        margin-top: 4px;
+    }
+    
+    a
+    {
+        color: #808080;
+        font-size: 12px;
+        margin-top: 5px;
+        display: inline-block;
+        float: right;
+    }
+    
+    a:hover
+    {
+        color: #c8c8c8;
+        text-decoration: none;
+    }
+      
+    .myAcc
+    {
+        background: url('../../styles/images/acc_link.png') no-repeat 0px 0px;
+        padding-left: 25px;
+        margin-right: 0px;
+        padding-bottom: 5px;
+        padding-top: 1px;
+    }
+    
+    .chooseRegion
+    {
+        background: url('../../styles/images/arr_down.png') no-repeat center right;
+        padding-right: 15px;
+        padding-left: 5px;
+        margin-right: 15px;
+        
+        img
+        {
+            margin-right: 5px;
+        }
+    }
+    
+   
+        
+}
+
+.hrow-2 
+{
+    background: url('../../styles/images/h_row_2_back.png') repeat-x;
+    height: 100px;
+    border-bottom: 1px solid #c0beba; 
+}
+
+.logo 
+{
+    background: url('../../styles/images/logo.png') no-repeat;
+    width: 334px;
+    height: 59px;
+    float: left;
+    text-indent: -9999px;
+    margin-top: 24px;
+}
+
+.menu 
+{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    float: right;
+    //width: 38.5%;
+    
+    li 
+    {
+        float: left;
+        margin-left: 20px;
+        
+        a
+        {
+            text-transform: uppercase;
+            color: @menuColor;
+            line-height: 100px;
+        }
+        
+    }
+    
+    li.first
+    {
+        margin: 0px;
+    }
+  
+}
+
+
+
+
+
+// Center
+// --------------------------------------------------
+.mainPhoto
+{
+    background: url('../../styles/images/main_page.png') no-repeat;
+    background-size: cover;
+    height: @mainPhotoHeight;
+    
+    .wrap
+    {
+        height: @mainPhotoHeight;
+    }
+    
+    .title
+    {
+        position: absolute;
+        top: 30%;
+        left: 0px;
+        color: #fff;
+        font-weight: normal;
+        font-size: 56px;
+        line-height: 56px;
+        margin: 0px;
+        padding: 0px;
+        text-shadow: 0px 0px 3px #000;
+    }
+}
+
+.checkoutBox
+{
+    width: 36.666666%;
+    background: url('../../styles/images/checkout_back.png') repeat-x;
+    float:right;
+    min-height: 435px;
+    margin-top: 290px;
+    margin-right: 14px;
+    color: #fff;
+    
+    .inner
+    {
+        padding: 6%;    
+    }
+    
+    form
+    {
+        margin: 0px;
+    }
+    
+    h1.head
+    {
+        font-size: 40px;
+        color: #fff;
+        margin: 0px;
+        padding: 0px;
+        font-weight: normal;
+    }
+    
+    h3
+    {
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 24px;
+        color: #fff;
+    }
+    
+    .text
+    {
+        font-size: 13px;
+        line-height: 18px;
+        color: #bfbfbf;
+        height: 90px;
+        overflow: hidden;
+        border-bottom: 1px solid #bfbfbf;
+        padding-bottom: 5px;
+        margin: 30px 0px 20px;
+    }
+    
+    .input-custom
+    {
+        width: 100%;
+        padding: 7px 0px;
+        color: #808080;
+        border: 1px solid #a4a4a4;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        text-indent: 10px;
+        font-size: 16px;
+        margin: 0px 0px 20px;
+        
+    }
+    
+    .selectAllRow
+    {
+        margin-bottom: 30px;
+    }
+    
+    .selRow
+    {
+       width: 50%;
+       position: relative;
+       
+       .css3 .selectyzeValue 
+       {
+           background: url('../../styles/images/bg_sel.png') no-repeat;
+           width: 82px;
+           height: 27px;
+           text-align: left;
+           line-height: 26px;
+           text-indent: 5px;
+       }
+       
+       .css3 .UlSelectize
+       {
+           width: 82px;
+           color: #fff;
+           left: 0px;
+           top: 27px;
+           background-color: #fff;
+       }
+       
+       .css3 li a
+       {
+           color: #333;
+           text-align: left;
+           text-indent: 5px;
+       }
+       
+        .css3 li a:hover
+       {
+           color: #fff;
+       }
+       
+       .DivSelectyze
+       {
+           width: 82px;
+           margin: 0px;
+       }
+    }
+    
+    .selRow-2
+    {
+        float: right;
+        
+        .selRow 
+        {
+            float: right;
+        }
+        
+        label
+        {
+            float: right;
+        }
+        
+        .DivSelectyze
+        {
+            float: right;
+        }
+    }
+    
+    
+    label 
+    {
+        display: inline-block;
+        font-size: 20px;
+        float: left;
+        margin: 0px;
+        margin-top: 3px;
+        margin-right: 10px;
+    }
+    
+    .buttonDef 
+    {
+        padding: 12px 22px;
+        -webkit-box-shadow: 0px 0px 0px 0px @buttonShadowColor; 
+        box-shadow: 0px 0px 0px 0px @buttonShadowColor;
+    }
+}
+
+.mainStrip 
+{
+    height: 100px;
+    background-color: @stripColor;
+    
+    .title
+    {
+        color: #fff;
+        margin: 0px;
+        padding: 0px;
+        margin-left: 4%;
+        line-height: 100px;
+        font-size: 26px;
+        font-weight: normal;
+        background: url('../../styles/images/check_icon.png') no-repeat 0px 32px;
+        padding-left: 50px;
+    }
+}
+
+
+// Footer
+// --------------------------------------------------
+footer
+{
+    background: url('../../styles/images/foot_back.png') repeat-x;
+    height: 483px;
+    position: relative;
+    
+    .footWrap
+    {
+        height: 235px; 
+        overflow: hidden;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    
+    .brandTable 
+    {
+        width: 100%;
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 40px;
+        
+        td 
+        {
+            vertical-align: middle;
+            height: 160px;
+            text-align: center;
+            padding: 0px 1%;
+        }
+    }
+    
+    .footTable
+    {
+        width: 100%;
+        
+        td 
+        {
+            vertical-align: top;
+            padding-right: 5%;
+        }
+        
+        .td-1 
+        {
+            width: 35%;
+        }
+        
+        .td-2 
+        {
+            width: 15%;
+        }
+        
+        .td-3 
+        {
+            width: 15%;
+        }
+        
+        .td-4 
+        {
+            width: 20%;
+            padding: 0px;
+        }
+        
+        td .title 
+        {
+            font-weight: bold;
+            margin: 0px 0px 30px;
+        }
+        
+        .list 
+        {
+            margin: 0px; 
+            padding: 0px;
+            list-style: none;
+          
+          li
+          {
+              margin-bottom: 10px;
+          }
+          
+          a 
+          {
+              color: @linkColor;
+          }
+            
+        }
+      
+    }
+    
+    .copyRight 
+    {
+        font-size: 12px;
+        margin: 10px 0px 0px;
+        color: @copyRightColor;
+      
+      sup 
+      {
+          font-size: 7px;
+      }
+    }
+    
+    input.text
+    {
+        margin: 0px;
+        padding: 9px 0px; 
+        width: 99%;
+        text-indent: 40px;
+        border: 1px solid #bfbfbf;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+     
+    input.submit
+    {
+        background: url('../../styles/images/loop.png') no-repeat;
+        width: 16px; 
+        height: 18px;
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        border: 0px;
+        text-indent: -99999px;
+        cursor: pointer;
+    } 
+    
+    .socialList
+    {
+        margin: 0px;
+        margin-top: 20px;
+        padding: 0px;
+        list-style: none;
+        
+        li 
+        {
+            margin-right: 10px;
+            float: left;
+        }
+    }
+}
+
+
+// Home page - center part  
+// --------------------------------------------------
+.mainBox-1 
+{
+    background-color: #f2f2f2;
+}
+ 
+ .optionBox 
+{
+     width: 53%;
+     margin-left: 4%;
+     
+     .row-1 
+     {
+         padding: 20px 0px;
+       
+       .head 
+       {
+           background: url('../../styles/images/tick.png') no-repeat 0px 3px;
+           margin: 0px;
+           padding-left: 18px;
+           padding-bottom: 10px;
+           border-bottom: 1px solid #747474;
+           font-size: 20px;
+       }
+       
+       table
+       {
+           width: 100%;
+           font-size: 16px;
+         
+         td
+         {
+            padding: 10px 0px;
+         }
+         
+         .td-2
+         {
+            text-align: right;
+         }
+         
+         .checkbox
+         {
+            margin: 0px;  
+         }
+         
+         
+         
+       }
+     }  
+}
+
+
+.mainBox-2
+{
+  
+  .column
+  {
+      width: 50%;
+      float: left;
+      
+      .inner
+      {
+          padding: 0px 15%;
+      }
+      
+      h1.title 
+      {
+          margin: 75px 0px 60px;
+          font-size: 34px;
+          font-weight: normal;
+      }
+      
+      .imgBox
+      {
+          margin-bottom: -10px;
+      }
+      
+      .desc
+      {
+          min-height: 110px;
+      }
+        
+  }
+    
+}
+  
+.buttonBox
+{
+    margin: 35px 0px;
+} 
+ 
+.receiptBox
+{
+    width: 469px;
+    height: 586px;
+    float: right;
+    background: url('../../styles/images/receipt_back.png') no-repeat;
+    margin-top: -65px;
+  
+  .inner
+  {
+      padding: 50px 65px 0px;  
+  }
+  
+  .top
+  {
+      width: 100%;
+      
+      td
+      {
+          padding-bottom: 20px;
+          border-bottom: 1px solid #cfcfcf;
+      }
+      
+      .td-2
+      {
+          text-align: right;
+          text-transform: uppercase;
+          color: #7f7f7f;
+          font-size: 22px;  
+      }
+  }
+  
+  .logoSmall
+  {
+      width: 156px;
+      height: 40px;
+      background: url('../../styles/images/logo_small.png') no-repeat;
+      display: block;
+  }
+  
+  .middle 
+  {
+      width: 100%;
+      margin-top: 24px;
+      
+      td 
+      {
+          font-size: 16px;
+          padding: 4px 0px;
+      }
+      
+      .td-2
+      {
+          text-align: right;
+          text-transform: uppercase;
+          color: #3f3f3f;
+      }
+        
+  }
+  
+  .total
+  {
+      width: 100%;
+      padding: 4px 0px;
+      border-top: 1px solid #9f9f9f;
+      border-bottom: 1px solid #9f9f9f;
+      margin-top: 25px;
+      border-collapse: inherit;
+      td 
+      {
+          padding: 23px 0px;
+          border-top: 1px solid #9f9f9f;
+          border-bottom: 1px solid #9f9f9f;
+          color: #000;
+          font-size: 20px;
+      }
+  }
+  
+  .printLink
+  {
+      background: url('../../styles/images/print_icon.png') no-repeat 0px 0px;
+      padding-left: 25px;
+      color: #7f7f7f;
+      margin: 20px 0px;
+      display: inline-block;
+      font-size: 16px;
+      text-decoration: underline;
+  }
+  
+  .printLink:hover
+  {
+      text-decoration: none;
+  }
+  
+  .bottom
+  {
+      .buttonDef
+      {
+          padding: 18px 0px;
+          width: 80%;
+          text-align: center;
+      }    
+  }
+  
+} 
+
+
